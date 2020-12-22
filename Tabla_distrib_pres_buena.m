@@ -1,8 +1,9 @@
 clear all
+%voy a cambiar el Mach de garganta 
 
-
+Voy a cambiar el Mactarga
  
- %% DIbujo distribuci髇 de presiones
+ %% DIbujo distribuci贸n de presiones
 M1=0.5;
 % d_tuberia= 0.076;
 d_garganta_tobera=0.07; 
@@ -48,7 +49,7 @@ for A=0.0150:-0.0001:Ag
      
      
      
-%% SOluci髇 subs髇ica (1 > rP > rP_BS)
+%% SOluci贸n subs贸nica (1 > rP > rP_BS)
      
      
      for Me=0:0.00001:1
@@ -101,13 +102,13 @@ vrP=zeros(63,1);
  vrP_ePM =zeros(60,1);
  
      
-         prompt = 'Relaci髇 presiones onda.ch.normal ';
+         prompt = 'Relaci贸n presiones onda.ch.normal ';
          rpest_och= input(prompt);
          
      for A= Ag:0.0001:As
         n=n+1;
         vA_2(n)=vA_2(n)+A;
-%         prompt = 'Relaci髇 de 醨eas cr韙icas ';
+%         prompt = 'Relaci贸n de 谩reas cr铆ticas ';
 %         rA= input(prompt)
         rA=Ag/A;
         vrA_2(n)=vrA_2(n)+rA;
@@ -174,7 +175,7 @@ j=j+1;
  end
          
       
-%% SOluci髇 subs髇ica (1 > rP > rP_BS)
+%% SOluci贸n subs贸nica (1 > rP > rP_BS)
      
      
      for Ms=0:0.00001:1
@@ -206,7 +207,7 @@ fprintf(['La tobera se bloquea(M=1) con rP= ' num2str(vrP_1(113))])
 
 rP_Mach_1=vrP_1(113)
 
-fprintf(['La tobera se bloquea(M=1)- BLOQUEO S覰ICO con rP= ' num2str(vrP_BS(63))])
+fprintf(['La tobera se bloquea(M=1)- BLOQUEO S脫NICO con rP= ' num2str(vrP_BS(63))])
 
 rP_bloqueoS=vrP_BS(63)
 
@@ -228,12 +229,12 @@ fprintf(['Onda de choque normales dentro con rP= ' ])
 rP_bloqueoS
 rP_och_oblic
 
-fprintf(['Ondas de expansi髇 PM entre ='])
+fprintf(['Ondas de expansi贸n PM entre ='])
 
 rP_adap
 0
        
-fprintf(['Soluci髇 subs髇ica entre ='])
+fprintf(['Soluci贸n subs贸nica entre ='])
 
 rP_bloqueoS
 1
@@ -246,7 +247,7 @@ rP_bloqueoS
        xticks([-0.0074 0.0038 0.01])
        xticklabels({'A','Ag','As'})
        title('Distribucion de presiones');
-       ylabel('Relaci髇 de presiones');
+       ylabel('Relaci贸n de presiones');
        xlabel('Area');
        
         hold on;
