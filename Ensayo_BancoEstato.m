@@ -1,5 +1,6 @@
 %En primer lugar hay que definir las constantes que queremos introducir
 %como R,el diámetro de la tuberia y esas cosas.
+
 clear all 
 
 Dtub = 76.2*10^-3 %m
@@ -19,7 +20,7 @@ vGasto = zeros(T,1)
 % vM_valvula = zeros(T,1)
 
 
-Datos = xlsread('20180124-1'); %Aqui meteremos los datos de nuestro ensayo
+Datos = xlsread('20180124-1'); %Aqui meteremos los datos de nuestro ensayo,en este caso coge los valores del excel de ejemplo de un antiguo ensayo
 [m,n]=size(Datos);
 
 %Datos (asociar los valores a las columnas)
